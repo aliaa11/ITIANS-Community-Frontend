@@ -108,7 +108,7 @@ const CreateEmployerProfile = () => {
     });
 
     try {
-      const response = await axios.post("https://c6a0-41-33-92-146.ngrok-free.app/api/employer-profile", formData, {
+      const response = await axios.post("http://c6a0-41-33-92-146.ngrok-free.app/api/employer-profile", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",

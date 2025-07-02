@@ -36,7 +36,7 @@ function AdminSetPricePage() {
     }
     const token = localStorage.getItem('access-token');
     try {
-      await axios.post('https://c6a0-41-33-92-146.ngrok-free.app/api/set-job-price', { price }, {
+      await axios.post('http://c6a0-41-33-92-146.ngrok-free.app/api/set-job-price', { price }, {
         headers: {
           Authorization: `Bearer ${token}`
         }

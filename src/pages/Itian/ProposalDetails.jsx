@@ -29,7 +29,7 @@ const ProposalDetails = () => {
       const token = localStorage.getItem('access-token');
       if (!token) throw new Error('Please login to view this proposal');
 
-      const response = await axios.get(`https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/single/${id}`, {
+      const response = await axios.get(`http://c6a0-41-33-92-146.ngrok-free.app/api/job-application/single/${id}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -94,7 +94,7 @@ const ProposalDetails = () => {
       formDataToSend.append('_method', 'PUT');
       if (formData.cv) formDataToSend.append('cv', formData.cv);
 
-      const response = await axios.post(`https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${id}`, formDataToSend, {
+      const response = await axios.post(`http://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${id}`, formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`,
@@ -134,7 +134,7 @@ const ProposalDetails = () => {
         return;
       }
 
-      await axios.delete(`https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${id}`, {
+      await axios.delete(`http://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${id}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 

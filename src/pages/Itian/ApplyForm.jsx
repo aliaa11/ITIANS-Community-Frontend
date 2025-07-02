@@ -21,7 +21,7 @@ const ApplyForm = () => {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const res = await axios.get(`https://c6a0-41-33-92-146.ngrok-free.app/api/jobs/${id}`);
+        const res = await axios.get(`http://c6a0-41-33-92-146.ngrok-free.app/api/jobs/${id}`);
         setJob(res.data.data);
         setLoading(false);
       } catch (error) {

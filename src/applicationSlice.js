@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://c6a0-41-33-92-146.ngrok-free.app/api',
+  baseURL: 'http://c6a0-41-33-92-146.ngrok-free.app/api',
   headers: { 'Content-Type': 'application/json' },
 });
 

@@ -12,7 +12,7 @@ const echo = new Echo({
   cluster: 'eu',
   forceTLS: true,
   encrypted: true,
-  authEndpoint: 'https://c6a0-41-33-92-146.ngrok-free.app/api/broadcasting/auth',
+  authEndpoint: 'http://c6a0-41-33-92-146.ngrok-free.app/api/broadcasting/auth',
   auth: {
     headers: {
       Authorization: `Bearer ${token}`,

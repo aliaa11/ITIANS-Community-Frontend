@@ -16,7 +16,7 @@ function AdminSendEmailPage() {
   useEffect(() => {
     const fetchCompanies = async () => {
       const token = localStorage.getItem('access-token');
-      const response = await axios.get('https://c6a0-41-33-92-146.ngrok-free.app/api/employer-list', {
+      const response = await axios.get('http://c6a0-41-33-92-146.ngrok-free.app/api/employer-list', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCompanies(response.data);
@@ -56,7 +56,7 @@ function AdminSendEmailPage() {
     
     const token = localStorage.getItem('access-token');
     await axios.post(
-      'https://c6a0-41-33-92-146.ngrok-free.app/api/admin/send-round-ended-email',
+      'http://c6a0-41-33-92-146.ngrok-free.app/api/admin/send-round-ended-email',
       {
         message,
         company_ids: selectedCompanies,
