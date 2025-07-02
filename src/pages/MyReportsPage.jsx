@@ -48,7 +48,7 @@ const MyReportsPage = () => {
   const [actionLoading, setActionLoading] = useState(false);
   const [userRole, setUserRole] = useState('');
 
-  const API_BASE_URL = 'http://c6a0-41-33-92-146.ngrok-free.app/api';
+  const API_BASE_URL = 'https://itians-community-backend-production.up.railway.app/api';
 
   const getAuthToken = () => localStorage.getItem('access-token');
 

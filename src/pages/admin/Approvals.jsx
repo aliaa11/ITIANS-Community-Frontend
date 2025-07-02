@@ -73,7 +73,7 @@ const Approvals = () => {
       setActionLoading(true);
       try {
         const token = localStorage.getItem('access-token');
-        await axios.put(`http://c6a0-41-33-92-146.ngrok-free.app/api/itian-registration-requests/${id}/review`, {
+        await axios.put(`https://itians-community-backend-production.up.railway.app/api/itian-registration-requests/${id}/review`, {
           status: 'Approved',
         }, {
           headers: { Authorization: `Bearer ${token}` },
@@ -103,7 +103,7 @@ const Approvals = () => {
       setActionLoading(true);
       try {
         const token = localStorage.getItem('access-token');
-        await axios.put(`http://c6a0-41-33-92-146.ngrok-free.app/api/itian-registration-requests/${id}/review`, {
+        await axios.put(`https://itians-community-backend-production.up.railway.app/api/itian-registration-requests/${id}/review`, {
           status: 'Rejected',
         }, {
           headers: { Authorization: `Bearer ${token}` },

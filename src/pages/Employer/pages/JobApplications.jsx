@@ -292,7 +292,7 @@ const handleViewCV = (cvPath) => {
         const token = localStorage.getItem("access-token");
 
         // Fetch job title
-        const jobRes = await axios.get(`http://c6a0-41-33-92-146.ngrok-free.app/api/jobs/${id}`, {
+        const jobRes = await axios.get(`https://itians-community-backend-production.up.railway.app/api/jobs/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json"
@@ -304,7 +304,7 @@ const handleViewCV = (cvPath) => {
         }
 
         // Fetch applications
-        const response = await axios.get(`http://c6a0-41-33-92-146.ngrok-free.app/api/job/${id}/applications`, {
+        const response = await axios.get(`https://itians-community-backend-production.up.railway.app/api/job/${id}/applications`, {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json"
@@ -383,7 +383,7 @@ const handleViewCV = (cvPath) => {
 
       // Send status update (Laravel handles sending the email if approved)
       await axios.patch(
-        `http://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${appId}/status`,
+        `https://itians-community-backend-production.up.railway.app/api/job-application/${appId}/status`,
         { status: backendStatus },
         {
           headers: {

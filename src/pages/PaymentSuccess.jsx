@@ -10,7 +10,7 @@ function PaymentSuccess() {
       const token = localStorage.getItem("access-token");
 
       try {
-        const response = await axios.get("http://c6a0-41-33-92-146.ngrok-free.app/api/my-latest-payment", {
+        const response = await axios.get("https://itians-community-backend-production.up.railway.app/api/my-latest-payment", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -11,7 +11,7 @@ function PaymentPage() {
     const checkPaymentStatus = async () => {
       try {
         const token = localStorage.getItem('access-token');
-        const response = await axios.get('http://c6a0-41-33-92-146.ngrok-free.app/api/has-unused-payment', {
+        const response = await axios.get('https://itians-community-backend-production.up.railway.app/api/has-unused-payment', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -36,7 +36,7 @@ function PaymentPage() {
     } else {
       try {
         const response = await axios.post(
-          'http://c6a0-41-33-92-146.ngrok-free.app/api/create-checkout-session',
+          'https://itians-community-backend-production.up.railway.app/api/create-checkout-session',
           {},
           {
             headers: {

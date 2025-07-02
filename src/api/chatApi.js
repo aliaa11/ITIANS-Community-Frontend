@@ -6,7 +6,7 @@ export const chatApi = createApi({
   
   reducerPath: 'chatApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://c6a0-41-33-92-146.ngrok-free.app/api/mychat/',
+    baseUrl: 'https://itians-community-backend-production.up.railway.app/api/mychat/',
     prepareHeaders: (headers, { getState }) => {
       // أضف Authorization header إذا كان متوفر
       const token = getState().auth?.token || localStorage.getItem('access-token');

@@ -26,7 +26,7 @@ const ResetPassword = () => {
       return;
     }
     try {
-      await axios.post("http://c6a0-41-33-92-146.ngrok-free.app/api/reset-password", {
+      await axios.post("https://itians-community-backend-production.up.railway.app/api/reset-password", {
         token,
         email,
         password,

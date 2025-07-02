@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const testimonialsApi = createApi({
   reducerPath: 'testimonialsApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://c6a0-41-33-92-146.ngrok-free.app/api',
+    baseUrl: 'https://itians-community-backend-production.up.railway.app/api',
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('access-token')
       if (token) {

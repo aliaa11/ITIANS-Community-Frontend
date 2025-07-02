@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
       try {
         const token = localStorage.getItem('access-token');
         if (token) {
-            const response = await axios.get('http://c6a0-41-33-92-146.ngrok-free.app/api/itian-profile', {
+            const response = await axios.get('https://itians-community-backend-production.up.railway.app/api/itian-profile', {
             headers: {
               Authorization: `Bearer ${token}`
             }
