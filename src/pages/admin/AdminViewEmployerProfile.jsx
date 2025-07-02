@@ -31,7 +31,7 @@ const ViewEmployerProfile = () => {
     company: true,
   });
 
-  const BASE_URL = "http://localhost:8000";
+  const BASE_URL = "https://c6a0-41-33-92-146.ngrok-free.app";
 
   const toggleSection = (section) => {
     setExpandedSections(prev => ({

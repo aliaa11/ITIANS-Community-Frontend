@@ -44,7 +44,7 @@ const AdminReportsPage = () => {
   const [showDetailsModal, setShowDetailsModal] = useState(false);
   const [actionLoading, setActionLoading] = useState(false);
 
-  const API_BASE_URL = 'http://localhost:8000/api';
+  const API_BASE_URL = 'https://c6a0-41-33-92-146.ngrok-free.app/api';
 
   const getAuthToken = () => localStorage.getItem('access-token');
 

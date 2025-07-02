@@ -284,7 +284,7 @@ const CommentSection = ({ postId }) => {
               {comment.user.profile_picture ? (
                 <motion.img
                   whileHover={{ scale: 1.05 }}
-                  src={`http://localhost:8000/storage/${comment.user.profile_picture}`}
+                  src={`https://c6a0-41-33-92-146.ngrok-free.app/storage/${comment.user.profile_picture}`}
                   alt="Profile"
                   className="h-10 w-10 rounded-full object-cover border-2 border-white shadow-md cursor-pointer"
                   onClick={() => handleProfileClick(comment.user.id)}
@@ -442,7 +442,7 @@ const CommentSection = ({ postId }) => {
             <div className="flex items-start space-x-3">
               {user?.profile_picture ? (
                 <img
-                  src={`http://localhost:8000/storage/${user.profile_picture}`}
+                  src={`https://c6a0-41-33-92-146.ngrok-free.app/storage/${user.profile_picture}`}
                   alt="Profile"
                   className="h-8 w-8 rounded-full object-cover border border-white shadow-sm"
                 />
@@ -537,7 +537,7 @@ const CommentSection = ({ postId }) => {
           {user?.profile_picture ? (
             <motion.img
               whileHover={{ scale: 1.05 }}
-              src={`http://localhost:8000/storage/${user.profile_picture}`}
+              src={`https://c6a0-41-33-92-146.ngrok-free.app/storage/${user.profile_picture}`}
               alt="Profile"
               className="h-12 w-12 rounded-full object-cover border-2 border-white shadow-md"
             />

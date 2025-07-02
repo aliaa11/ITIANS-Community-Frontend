@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://c6a0-41-33-92-146.ngrok-free.app/api';
 
 // Helper function to get auth headers
 const getAuthHeaders = () => {
@@ -41,7 +41,7 @@ export const updatePost = async (postId, data) => {
   }
 
   const response = await axios.post(
-    `http://localhost:8000/api/posts/${postId}?_method=PUT`,
+    `https://c6a0-41-33-92-146.ngrok-free.app/api/posts/${postId}?_method=PUT`,
     formData,
     {
       headers: {
@@ -70,7 +70,7 @@ export const createPost = async (postData) => {
     formData.append('image', postData.image);
   }
 
-  const response = await axios.post('http://localhost:8000/api/posts', formData, {
+  const response = await axios.post('https://c6a0-41-33-92-146.ngrok-free.app/api/posts', formData, {
     headers: {
       Authorization: `Bearer ${localStorage.getItem('access-token')}`,
       // لا تحدد Content-Type، axios سيحددها تلقائياً لـ multipart/form-data

@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Update API base URL - make sure this matches your Laravel backend URL
-const API_BASE_URL = 'http://localhost:8000/api'; // Adjust port if different
+const API_BASE_URL = 'https://c6a0-41-33-92-146.ngrok-free.app/api'; // Adjust port if different
 
 // Helper function to handle API responses
 const handleApiResponse = async (response) => {

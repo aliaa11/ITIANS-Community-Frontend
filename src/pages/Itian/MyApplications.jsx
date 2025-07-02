@@ -35,7 +35,7 @@ const MyApplications = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:8000/api/my-applications', {
+        const response = await axios.get('https://c6a0-41-33-92-146.ngrok-free.app/api/my-applications', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -135,7 +135,7 @@ const MyApplications = () => {
       }
 
       const response = await axios.post(
-        `http://localhost:8000/api/job-application/${selectedApplication.id}`,
+        `https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${selectedApplication.id}`,
         formDataToSend,
         {
           headers: {
@@ -151,7 +151,7 @@ const MyApplications = () => {
         closeModal();
         const token = localStorage.getItem('access-token');
         try {
-          const updated = await axios.get('http://localhost:8000/api/itian/job-application', {
+          const updated = await axios.get('https://c6a0-41-33-92-146.ngrok-free.app/api/itian/job-application', {
             headers: { Authorization: `Bearer ${token}` }
           });
           setApplications(updated.data.data);
@@ -195,7 +195,7 @@ const MyApplications = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:8000/api/job-application/${applicationToDelete}`, {
+      await axios.delete(`https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${applicationToDelete}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

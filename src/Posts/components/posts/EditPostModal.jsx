@@ -7,7 +7,7 @@ const EditPostModal = ({ post, onClose, onUpdate }) => {
   const [title, setTitle] = useState(post.title);
   const [content, setContent] = useState(post.content);
   const [image, setImage] = useState(null);
-  const [preview, setPreview] = useState(post.image ? `http://localhost:8000/storage/${post.image}` : null);
+  const [preview, setPreview] = useState(post.image ? `https://c6a0-41-33-92-146.ngrok-free.app/storage/${post.image}` : null);
   const [isLoading, setIsLoading] = useState(false);
   const fileInputRef = useRef(null);
   const modalRef = useRef(null);

@@ -16,7 +16,7 @@ import {
 } from '../applicationSlice';
 
 const api = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://c6a0-41-33-92-146.ngrok-free.app/api",
   headers: {
     "Content-Type": "application/json",
   },

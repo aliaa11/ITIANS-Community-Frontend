@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api/rag';
+const API_BASE_URL = 'https://c6a0-41-33-92-146.ngrok-free.app/api/rag';
 const getAuthHeaders = () => {
   const token = localStorage.getItem('access-token');
   return {

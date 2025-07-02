@@ -29,7 +29,7 @@ const ProposalDetails = () => {
       const token = localStorage.getItem('access-token');
       if (!token) throw new Error('Please login to view this proposal');
 
-      const response = await axios.get(`http://localhost:8000/api/job-application/single/${id}`, {
+      const response = await axios.get(`https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/single/${id}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -94,7 +94,7 @@ const ProposalDetails = () => {
       formDataToSend.append('_method', 'PUT');
       if (formData.cv) formDataToSend.append('cv', formData.cv);
 
-      const response = await axios.post(`http://localhost:8000/api/job-application/${id}`, formDataToSend, {
+      const response = await axios.post(`https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${id}`, formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`,
@@ -134,7 +134,7 @@ const ProposalDetails = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:8000/api/job-application/${id}`, {
+      await axios.delete(`https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${id}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -189,7 +189,7 @@ if (loading) return (
           <div className="proposal-section">
             <h2 className="proposal-section-title">Submitted CV</h2>
             {proposal.cv ? (
-              <a href={`http://localhost:8000/storage/${proposal.cv}`} target="_blank" rel="noopener noreferrer" className="proposal-cv-link">View/Download CV</a>
+              <a href={`https://c6a0-41-33-92-146.ngrok-free.app/storage/${proposal.cv}`} target="_blank" rel="noopener noreferrer" className="proposal-cv-link">View/Download CV</a>
             ) : <p>No CV submitted</p>}
           </div>
         </div>
@@ -246,7 +246,7 @@ if (loading) return (
               <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" onChange={handleFileChange} className="proposal-form-file" />
               {proposal.cv && (
                 <p className="proposal-current-cv">
-                  Current CV: <a href={`http://localhost:8000/storage/${proposal.cv}`} target="_blank" rel="noopener noreferrer" className="proposal-cv-link">View CV</a>
+                  Current CV: <a href={`https://c6a0-41-33-92-146.ngrok-free.app/storage/${proposal.cv}`} target="_blank" rel="noopener noreferrer" className="proposal-cv-link">View CV</a>
                 </p>
               )}
             </div>

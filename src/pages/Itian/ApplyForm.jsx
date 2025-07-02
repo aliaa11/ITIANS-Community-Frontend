@@ -21,7 +21,7 @@ const ApplyForm = () => {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/api/jobs/${id}`);
+        const res = await axios.get(`https://c6a0-41-33-92-146.ngrok-free.app/api/jobs/${id}`);
         setJob(res.data.data);
         setLoading(false);
       } catch (error) {
@@ -93,7 +93,7 @@ const ApplyForm = () => {
         availability: formData.availability
       }));
       
-      const response = await axios.post('http://localhost:8000/api/job-applications', formDataToSend, {
+      const response = await axios.post('https://c6a0-41-33-92-146.ngrok-free.appapi/job-applications', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${localStorage.getItem('token')}`

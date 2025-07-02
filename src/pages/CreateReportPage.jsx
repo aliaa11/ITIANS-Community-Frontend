@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { Send, Loader2, X, AlertCircle } from 'lucide-react';
 import ItianNavbar from '../components/ItianNavbar';
 import EmployerNavbar from '../components/EmployerNavbar'; // اضافة EmployerNavbar
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://c6a0-41-33-92-146.ngrok-free.app/api';
 
 const CreateReportPage = () => {
   const navigate = useNavigate();

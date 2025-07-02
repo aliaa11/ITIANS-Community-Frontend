@@ -109,7 +109,7 @@ const PostCard = memo(
         <div className="h-12 w-12 rounded-full bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center overflow-hidden ring-2 ring-white group-hover:ring-red-300 transition-all duration-300">
           {post.itian.profile_picture ? (
             <motion.img
-              src={`http://localhost:8000/storage/${post.itian.profile_picture}`}
+              src={`https://c6a0-41-33-92-146.ngrok-free.app/storage/${post.itian.profile_picture}`}
               alt="Profile"
               className="h-full w-full object-cover"
               initial={{ opacity: 0 }}
@@ -285,7 +285,7 @@ const PostCard = memo(
               className="mt-4 rounded-xl overflow-hidden border border-gray-100"
             >
               <motion.img
-                src={`http://localhost:8000/storage/${post.image}`}
+                src={`https://c6a0-41-33-92-146.ngrok-free.app/storage/${post.image}`}
                 alt="Post"
                 className="w-full h-auto object-cover max-h-96 cursor-pointer"
                 loading="lazy"

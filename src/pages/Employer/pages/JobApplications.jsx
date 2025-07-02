@@ -23,7 +23,7 @@ const navigate = useNavigate();
 
 
 const handleViewCV = (cvPath) => {
-  const fullUrl = `http://localhost:8000/storage/${cvPath}`;
+  const fullUrl = `https://c6a0-41-33-92-146.ngrok-free.app/storage/${cvPath}`;
   
   MySwal.fire({
     title: 'CV Preview',
@@ -159,7 +159,7 @@ const handleViewCV = (cvPath) => {
           <div className="w-16 h-16 rounded-full mx-auto mb-3 overflow-hidden bg-gray-200 flex items-center justify-center">
             {app.itian && app.itian.profile_picture ? (
               <img
-                src={`http://localhost:8000/storage/${app.itian.profile_picture}`}
+                src={`https://c6a0-41-33-92-146.ngrok-free.app/storage/${app.itian.profile_picture}`}
                 alt={`${app.itian.first_name} ${app.itian.last_name}`}
                 className="w-full h-full object-cover"
               />
@@ -292,7 +292,7 @@ const handleViewCV = (cvPath) => {
         const token = localStorage.getItem("access-token");
 
         // Fetch job title
-        const jobRes = await axios.get(`http://localhost:8000/api/jobs/${id}`, {
+        const jobRes = await axios.get(`https://c6a0-41-33-92-146.ngrok-free.app/api/jobs/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json"
@@ -304,7 +304,7 @@ const handleViewCV = (cvPath) => {
         }
 
         // Fetch applications
-        const response = await axios.get(`http://localhost:8000/api/job/${id}/applications`, {
+        const response = await axios.get(`https://c6a0-41-33-92-146.ngrok-free.app/api/job/${id}/applications`, {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json"
@@ -383,7 +383,7 @@ const handleViewCV = (cvPath) => {
 
       // Send status update (Laravel handles sending the email if approved)
       await axios.patch(
-        `http://localhost:8000/api/job-application/${appId}/status`,
+        `https://c6a0-41-33-92-146.ngrok-free.app/api/job-application/${appId}/status`,
         { status: backendStatus },
         {
           headers: {
