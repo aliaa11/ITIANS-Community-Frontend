@@ -1,0 +1,68 @@
+.admin-root {
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+}
+.admin-sidebar {
+  width: 280px;
+  background: #e35d5b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.07);
+  min-height: 100vh;
+}
+.admin-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 8px #b02a2a33;
+  text-align: center;
+}
+.admin-sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+.admin-sidebar nav ul li {
+  margin: 1.5rem 0;
+  width: 100%;
+}
+.admin-sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+}
+.admin-sidebar nav ul li a:hover, .admin-sidebar nav ul li a.active {
+  background: #fff;
+  color: #e35d5b;
+  box-shadow: 0 2px 12px #e35d5b22;
+}
+.admin-main {
+  flex: 1;
+  background: #fff;
+  padding: 2.5rem 2rem;
+  min-height: 100vh;
+  color: #111;
+}
+/* Optional: Add a subtle divider */
+.admin-sidebar::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 1px;
+  background: #fff3;
+  margin: 2rem auto 0 auto;
+}

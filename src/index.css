@@ -1,0 +1,108 @@
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+/* 
+import { useSelector, useDispatch } from 'react-redux';
+import { clearUser } from '../store/userSlice';
+import Notifications from '../components/Notification'; // عدلي المسار حسب مكانه
+
+const Navbar = () => {
+  const dispatch = useDispatch();
+  const { user, role } = useSelector((state) => state.user);
+
+  const handleLogout = () => {
+    dispatch(clearUser());
+    localStorage.removeItem('access-token');
+    window.location.href = '/login';
+  };
+
+  return (
+    <nav className="bg-gray-800 text-white px-4 py-2 flex justify-between items-center">
+      <div className="text-xl font-bold">My App</div>
+      <div className="flex items-center gap-4">
+        {user ? (
+          <>
+              <Notifications />
+            <span>👤 {user.name || user.email}</span>
+            <span className="text-sm bg-gray-700 px-2 py-1 rounded">{role}</span>
+            <button
+              onClick={handleLogout}
+              className="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-sm"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <a href="/login" className="text-sm underline">Login</a>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar; */

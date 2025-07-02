@@ -1,0 +1,636 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #b53c35;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  margin-bottom: 8%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+  opacity: 0.9;
+  color:white;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+.dropbtn:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 220px;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid #eee;
+}
+
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-icon {
+  color: #b53c35;
+  font-size: 0.9rem;
+}
+
+.notification-wrapper {
+  position: relative;
+  margin-left: auto;
+}
+
+.notification-icon {
+  position: relative;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+.notification-icon:hover {
+  transform: scale(1.1);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ffcc00;
+  color: #333;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  width: 300px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 10px 0;
+  z-index: 1001;
+}
+
+.notification-item {
+  padding: 12px 16px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.notification-item:hover {
+  background-color: #f9f9f9;
+}
+
+.view-all {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: #b53c35;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.view-all:hover {
+  background-color: #f5f5f5;
+}
+
+.toggle-btn {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #b53c35;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding-left: 30px;
+  }
+
+  .dropdown-icon {
+    color: white;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  .notification-wrapper {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .notification-dropdown {
+    width: 100%;
+    right: auto;
+    left: 0;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+}
+/* Add these styles to your existing Navbar.css */
+
+.jobs-dropdown {
+  padding: 10px 0;
+  min-width: 250px;
+}
+
+.dropdown-section {
+  margin-bottom: 5px;
+}
+
+.dropdown-header {
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #b53c35;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 16px 8px 30px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+  color: #b53c35;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 8px 0;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .jobs-dropdown {
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+  .dropdown-header {
+    color: white;
+    padding-left: 20px;
+  }
+  
+  .dropdown-item {
+    color: white;
+    padding-left: 40px;
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+  }
+  
+  .dropdown-divider {
+    background-color: rgba(255,255,255,0.2);
+  }
+}
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #b53c35;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-spacer {
+  height: 60px; /* Adjust this to match your navbar height */
+}
+
+/* Rest of your existing navbar styles... */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 220px;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid #eee;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* Add this to handle clicks outside dropdown */
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: none;
+}
+
+.dropdown.open ~ .dropdown-backdrop {
+  display: block;
+}
+/* Add to Navbar.css */
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+  .logout-btn {
+    padding-left: 20px;
+    justify-content: flex-start;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+/* Admin Navbar - معدل */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #8B0000, #B22222);
+  padding: 8px 16px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  z-index: 1000;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.admin-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-logo2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.admin-nav-items {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.admin-logout-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.admin-nav-icon {
+  font-size: 0.9rem;
+}
+
+.admin-toggle-btn {
+  display: none;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.admin-navbar-spacer {
+  height: 56px;
+}
+
+/* Admin Sidebar - معدل */
+.admin-sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(180deg, #7a0000, #9a2323);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 56px;
+  box-shadow: 1px 0 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.admin-sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-sidebar-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-sidebar-nav {
+  padding: 8px 0;
+}
+
+.admin-sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.admin-sidebar-link:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.admin-sidebar-icon {
+  margin-right: 8px;
+  font-size: 0.9rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Layout */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-main {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+  padding-top: 56px;
+}
+
+.admin-content {
+  padding: 16px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .admin-sidebar {
+    width: 200px;
+  }
+  .admin-main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-nav-items {
+    display: none;
+  }
+  
+  .admin-toggle-btn {
+    display: block;
+  }
+  
+  .admin-sidebar {
+    width: 200px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .admin-main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-logo {
+    font-size: 1rem;
+    max-width: 120px;
+  }
+  
+  .admin-sidebar {
+    width: 180px;
+  }
+  
+  .admin-content {
+    padding: 12px;
+  }
+}
+/* أنماط جديدة للصورة والعنوان */
+.admin-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-logo-img {
+  height: 36px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.admin-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .admin-logo-img {
+    height: 30px;
+  }
+  
+  .admin-title {
+    font-size: 1.1rem;
+  }
+  
+  .admin-username {
+    display: none;
+  }
+}
+/* Rest of your existing CSS... */

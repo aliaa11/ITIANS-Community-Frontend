@@ -1,0 +1,308 @@
+/* Main layout */
+.register-root {
+  min-height: 100vh;
+  display: flex;
+  background: #fff;
+}
+
+.register-left {
+  flex: 0 0 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.register-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  border: 2px solid #000;
+}
+
+.register-header {
+  margin-bottom: 30px;
+}
+
+.register-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.register-field {
+  margin-bottom: 20px;
+}
+
+.register-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.register-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #fff;
+  color: #000;
+}
+
+.register-input:focus {
+  border-color: #e35d5b;
+}
+
+.input-error {
+  color: #e35d5b;
+  background: #fff0f0;
+  border: 1px solid #e35d5b;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(227,93,91,0.05);
+}
+
+.register-password-wrapper {
+  position: relative;
+}
+
+.register-password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #718096;
+  font-size: 18px;
+}
+
+.register-radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.register-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.register-radio {
+  accent-color: #4299e1;
+}
+
+.register-certificate-upload {
+  border: 2px dashed #cbd5e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fafafa;
+  transition: border-color 0.2s;
+}
+.register-certificate-upload.drag-over {
+  border-color: #4299e1;
+}
+
+.register-certificate-label {
+  cursor: pointer;
+  display: block;
+}
+
+.register-certificate-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #a0aec0;
+}
+
+.register-certificate-text {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 4px;
+}
+
+.register-certificate-hint {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.register-terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+.register-checkbox {
+  margin-top: 2px;
+  accent-color: #4299e1;
+}
+
+.register-link {
+  color: #4299e1;
+  text-decoration: underline;
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px;
+  background: #e35d5b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(227,93,91,0.08);
+}
+
+.register-button:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(227,93,91,0.18);
+}
+
+.register-divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  color: #a0aec0;
+  font-size: 14px;
+}
+.register-divider span {
+  background: white;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+.register-divider:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+.register-social-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.register-social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.register-social-btn:hover {
+  border-color: #cbd5e0;
+}
+.register-social-btn.google .register-social-icon {
+  color: #4285F4;
+}
+.register-social-btn.facebook .register-social-icon {
+  color: #1877F2;
+}
+
+.register-hero {
+  flex: 1;
+  background: linear-gradient(135deg, #fff 0%, #ecb5b5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  color: #9d312e;
+  position: relative;
+  overflow: hidden;
+}
+.register-hero-bg1 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: rgba(227,93,91,0.12);
+  border-radius: 50%;
+  z-index: 1;
+}
+.register-hero-bg2 {
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+  width: 150px;
+  height: 150px;
+  background: rgba(227,93,91,0.08);
+  border-radius: 50%;
+  z-index: 1;
+}
+.register-hero-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 500px;
+}
+.register-hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  color: #9d312e;
+}
+.register-hero-desc {
+  font-size: 18px;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #9d312e;
+}
+.register-hero-people {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.register-hero-person {
+  width: 80px;
+  height: 80px;
+  background: rgba(227,93,91,0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #fff;
+  border: 2px solid #e35d5b;
+}

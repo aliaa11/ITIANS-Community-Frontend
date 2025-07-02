@@ -1,0 +1,447 @@
+/* Base Styles */
+.proposal-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Loading State */
+.proposal-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.proposal-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.25rem solid rgba(153, 27, 27, 0.2);
+  border-top-color: #991b1b;
+  border-radius: 50%;
+  animation: proposal-spin 1s linear infinite;
+}
+
+@keyframes proposal-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error State */
+.proposal-error {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+}
+
+.proposal-error-message {
+  color: #991b1b;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Not Found State */
+.proposal-not-found {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+}
+
+/* Card Styles */
+.proposal-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-left: 4px solid #991b1b;
+}
+
+.proposal-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.proposal-title {
+  font-size: 1.5rem;
+  color: #991b1b;
+  margin-bottom: 0.5rem;
+}
+
+.proposal-status {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.proposal-status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.proposal-status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.proposal-status-accepted {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.proposal-status-rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Content Sections */
+.proposal-content {
+  padding: 0.5rem;
+}
+
+.proposal-section {
+  margin-bottom: 1.5rem;
+}
+
+.proposal-section-title {
+  font-size: 1.25rem;
+  color: #991b1b;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #fecaca;
+  padding-bottom: 0.25rem;
+}
+
+/* Detail Styles */
+.proposal-detail {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.proposal-detail-label {
+  font-weight: 600;
+  color: #991b1b;
+  min-width: 100px;
+}
+
+.proposal-detail-value {
+  color: #6b7280;
+}
+
+/* Cover Letter */
+/* Cover Letter Styles */
+.proposal-cover-letter {
+  white-space: pre-line;
+  line-height: 1.5;
+  color: #4b5563;
+  padding: 0.75rem;
+  background-color: #fef2f2;
+  border-radius: 0.25rem;
+  border: 1px solid #fecaca;
+  font-size: 0.95rem;
+  word-wrap: break-word; /* Ensure long words break */
+  overflow-wrap: break-word; /* Alternative to word-wrap */
+  max-width: 100%; /* Prevent horizontal overflow */
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* CV Link */
+.proposal-cv-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #991b1b;
+  color: white;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.proposal-cv-link:hover {
+  background-color: #7f1d1d;
+}
+
+/* Action Buttons */
+.proposal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.proposal-back-btn {
+  padding: 0.5rem 1rem;
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.proposal-back-btn:hover {
+  background-color: #fee2e2;
+}
+
+.proposal-action-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.proposal-edit-btn {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.proposal-edit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.proposal-delete-btn {
+  padding: 0.5rem 1rem;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.proposal-delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Modal Styles */
+.proposal-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  outline: none;
+}
+
+.proposal-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.proposal-modal-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.proposal-modal-title {
+  font-size: 1.25rem;
+  color: #991b1b;
+  margin: 0;
+}
+
+.proposal-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+/* Form Styles */
+.proposal-form {
+  padding: 1.5rem;
+}
+
+.proposal-form-group {
+  margin-bottom: 1rem;
+}
+
+.proposal-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #991b1b;
+}
+
+.proposal-form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 150px;
+}
+
+.proposal-form-file {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.proposal-current-cv {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.proposal-form-error {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.proposal-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.proposal-cancel-btn {
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.proposal-cancel-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.proposal-submit-btn {
+  padding: 0.5rem 1rem;
+  background-color: #991b1b;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.proposal-submit-btn:hover {
+  background-color: #7f1d1d;
+}
+
+.proposal-submit-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Success Message */
+.proposal-success-message {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.proposal-success-title {
+  color: #166534;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.proposal-success-text {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.proposal-modal-close-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: #991b1b;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.proposal-modal-close-btn:hover {
+  background-color: #7f1d1d;
+}
+
+/* Delete Confirmation */
+.proposal-delete-content {
+  padding: 1.5rem;
+}
+
+.proposal-delete-message {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.proposal-delete-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .proposal-container {
+    padding: 1rem;
+  }
+  
+  .proposal-card {
+    padding: 1rem;
+  }
+  
+  .proposal-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .proposal-back-btn,
+  .proposal-edit-btn,
+  .proposal-delete-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .proposal-action-buttons {
+    width: 100%;
+  }
+  
+  .proposal-detail {
+    flex-direction: column;
+  }
+  
+  .proposal-detail-label {
+    margin-bottom: 0.25rem;
+    min-width: auto;
+  }
+}

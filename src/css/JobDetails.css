@@ -1,0 +1,655 @@
+.job-details-container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px 15px;
+  background-color: #faf5f5;
+  box-sizing: border-box; /* تضمن أن الحشو لا يزيد من الحجم الكلي */
+}
+
+.job-card {
+  width: 100%;
+  max-width: 700px; /* تقليل العرض الأقصى */
+  border: 1px solid #f0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(227, 93, 91, 0.1);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto; /* توسيط البطاقة */
+  box-sizing: border-box; /* تضمن أن الحشو لا يزيد من الحجم الكلي */
+}
+
+.job-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f8e8e8;
+}
+
+.job-title {
+  margin: 0 0 8px 0;
+  font-size: 28px; /* تعديل حجم الخط */
+  font-weight: 700;
+  color: #9d312e;
+  line-height: 1.2;
+}
+
+
+
+
+
+.company {
+  margin: 0;
+  font-size: 18px;
+  color: #666;
+  position: relative;
+  padding-left: 20px;
+}
+
+.company::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #e35d5b;
+  border-radius: 50%;
+}
+
+.job-content {
+  margin: 30px 0;
+}
+
+.job-section h3 {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  color: #9d312e; /* لون أحمر داكن للعناوين الفرعية */
+  font-weight: 600;
+  position: relative;
+  padding-left: 15px;
+}
+
+.job-section h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 20px;
+  width: 4px;
+  background-color: #e35d5b;
+  border-radius: 2px;
+}
+
+.job-section p {
+  margin: 0 0 0 15px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #f0e0e0;
+}
+
+
+.application-modal {
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 5px 25px rgba(227, 93, 91, 0.2);
+  border: 1px solid #f0e0e0;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f8e8e8;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #9d312e;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #e35d5b;
+  transition: all 0.2s;
+  line-height: 1;
+}
+
+.close-modal-btn:hover {
+  color: #9d312e;
+  transform: rotate(90deg);
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #9d312e;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  padding: 12px;
+  border: 1px solid #f0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: vertical;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e35d5b;
+  box-shadow: 0 0 0 3px rgba(227, 93, 91, 0.1);
+}
+
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed #f0e0e0;
+  border-radius: 8px;
+  background: #fffafa;
+  transition: all 0.3s;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: #e35d5b;
+  background: #fff5f5;
+}
+
+/* زر التقديم الرئيسي */
+.apply-btnn {
+  background: linear-gradient(to right, #e35d5b, #d64542);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(227, 93, 91, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.apply-btn:hover {
+  background: linear-gradient(to right, #d64542, #c03939);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(227, 93, 91, 0.3);
+}
+
+.apply-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.apply-btn:hover::after {
+  transform: translateX(0);
+}
+
+/* أزرار الفورم */
+.submit-btn {
+  background: linear-gradient(to right, #e35d5b, #d64542);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 3px 10px rgba(227, 93, 91, 0.2);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #d64542, #c03939);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(227, 93, 91, 0.3);
+}
+
+.submit-btn:disabled {
+  background: #cccccc;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: white;
+  color: #e35d5b;
+  border: 1px solid #e35d5b;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #fff5f5;
+  color: #d64542;
+  border-color: #d64542;
+}
+/* رسائل الخطأ */
+.error-text {
+  color: #d64542;
+  margin: 10px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: #fff5f5;
+  border-radius: 6px;
+  border-left: 3px solid #d64542;
+}
+
+/* رسائل النجاح */
+.success-message {
+  text-align: center;
+  padding: 20px;
+  background: #f5fff5;
+  border-radius: 10px;
+  border-left: 4px solid #2e7d32;
+}
+
+.success-message h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.success-message p {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.success-message button {
+  background: #2e7d32;
+  color: white;
+}
+
+.success-message button:hover {
+  background: #1e6b24;
+}
+@media (max-width: 768px) {
+  .job-card {
+    padding: 25px;
+  }
+  
+  .job-title {
+    font-size: 26px;
+  }
+  
+  .job-section h3 {
+    font-size: 20px;
+  }
+  
+  .application-modal {
+    padding: 20px;
+    width: 95%;
+  }
+  
+  .apply-btn, 
+  .submit-btn,
+  .cancel-btn {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+
+/* تعديلات الفورم */
+.form-group textarea {
+  min-height: 120px; /* تقليل الارتفاع الأدنى */
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-group input[type="file"] {
+  padding: 10px;
+}
+
+html, body {
+  overflow-x: hidden; /* منع التمرير الأفقي */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* تعديلات للهواتف المحمولة */
+@media (max-width: 480px) {
+  .job-details-container {
+    padding: 20px 10px;
+  }
+  
+  .job-card {
+    padding: 20px;
+  }
+  
+  .job-title {
+    font-size: 24px;
+  }
+  
+  .application-modal {
+    padding: 20px 15px;
+    width: 95%;
+    max-height: 80vh;
+  }
+}
+
+/* JobDetails.css - جزء المودال */
+
+.application-modal {
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 5px 25px rgba(227, 93, 91, 0.2);
+  border: 1px solid #f0e0e0;
+  margin: 5vh auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f8e8e8;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #9d312e;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  padding-left: 15px;
+}
+
+.modal-header h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 20px;
+  width: 4px;
+  background-color: #e35d5b;
+  border-radius: 2px;
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #e35d5b;
+  transition: all 0.3s;
+  line-height: 1;
+  padding: 5px;
+}
+
+.close-modal-btn:hover {
+  color: #9d312e;
+  transform: rotate(90deg);
+}
+
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #9d312e;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  padding: 12px;
+  border: 1px solid #f0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: vertical;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e35d5b;
+  box-shadow: 0 0 0 3px rgba(227, 93, 91, 0.1);
+}
+
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed #f0e0e0;
+  border-radius: 8px;
+  background: #fffafa;
+  transition: all 0.3s;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: #e35d5b;
+  background: #fff5f5;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background: white;
+  color: #e35d5b;
+  border: 2px solid #e35d5b;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #fff5f5;
+  color: #d64542;
+  border-color: #d64542;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #e35d5b, #d64542);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 3px 10px rgba(227, 93, 91, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #d64542, #c03939);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(227, 93, 91, 0.3);
+}
+
+.submit-btn:disabled {
+  background: #cccccc;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.submit-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.submit-btn:hover::after {
+  transform: translateX(0);
+}
+
+.error-text {
+  color: #d64542;
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: #fff5f5;
+  border-radius: 6px;
+  border-left: 3px solid #d64542;
+}
+
+.success-message {
+  text-align: center;
+  padding: 20px;
+  background: #f5fff5;
+  border-radius: 10px;
+  border-left: 4px solid #2e7d32;
+}
+
+.success-message h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.success-message p {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.success-message button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.success-message button:hover {
+  background: #1e6b24;
+}
+
+@media (max-width: 768px) {
+  .application-modal {
+    padding: 20px;
+    width: 95%;
+    max-height: 80vh;
+  }
+  
+  .modal-header h2 {
+    font-size: 20px;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+  }
+  
+  .submit-btn, .cancel-btn {
+    padding: 8px 16px;
+    font-size: 15px;
+  }
+}
+/* View Proposal Button */
+.view-proposal-btn {
+  background: linear-gradient(to right, #e35d5b, #d64542);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(227, 93, 91, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+.view-proposal-btn:hover {
+  background: linear-gradient(to right, #d64542, #c03939);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(227, 93, 91, 0.3);
+}
+
+.view-proposal-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.view-proposal-btn:hover::after {
+  transform: translateX(0);
+}
